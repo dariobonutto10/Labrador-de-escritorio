@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win nsis portable"
+    "dist": "electron-builder --win nsis portable --publish never"
   },
   "devDependencies": {
     "electron": "^35.1.5",
@@ -16,11 +16,23 @@
   "build": {
     "appId": "com.labrador.escritorio",
     "productName": "Labrador de Escritorio",
-    "directories": { "output": "dist" },
-    "files": ["main.js", "preload.js", "index.html", "styles.css", "renderer.js", "assets/**/*", "package.json"],
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "renderer.js",
+      "assets/**/*",
+      "package.json"
+    ],
     "win": {
-      "target": ["nsis", "portable"],
-      "artifactName": "Labrador-Escritorio-${version}-${arch}.${ext}"
+      "target": [
+        "nsis",
+        "portable"
+      ]
     },
     "nsis": {
       "oneClick": false,

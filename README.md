@@ -14,7 +14,7 @@ Mascota animada para Windows: un cachorro labrador negro estilo anime/Ghibli sen
 
 ## Probar en tu PC
 
-Necesitás Node.js 20 o superior.
+Necesitás Node.js 24 o superior para ejecutar o compilar localmente.
 
 ```bash
 npm install
@@ -27,7 +27,7 @@ npm start
 npm run dist
 ```
 
-Los archivos aparecerán en la carpeta `dist/`: instalador Windows y versión portable.
+Los archivos aparecerán en la carpeta `dist/`: instalador Windows (NSIS) y versión portable. Se generan con nombres distintos para evitar que uno sobrescriba al otro. La compilación no intenta publicar automáticamente desde electron-builder; GitHub Actions guarda los ejecutables como artefacto y solo los adjunta a una Release cuando ejecutás el workflow sobre una etiqueta `v*`.
 
 ## Compilar desde GitHub (sin instalar herramientas en tu PC)
 
